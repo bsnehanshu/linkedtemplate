@@ -18,7 +18,7 @@ steps:
     resourceGroupName: 'SB-linked-RG'
     location: 'Australia East'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/bsnehanshu/linkedtemplate/main/azuredeploy.json?token=AF2RAO2MHLSS3CEI7H37WXTASIY2O'
+    csmFileLink: 'https://github.com/bsnehanshu/linkedtemplate/blob/main/azuredeploy.json'
     overrideParameters: '-projectName snehlinktemp'
     deploymentMode: 'Incremental'
     deploymentName: 'snehdeploy'
