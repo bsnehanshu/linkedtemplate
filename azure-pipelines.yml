@@ -8,6 +8,13 @@ trigger:
 
 pool: Default
 
+resources:
+  repositories:
+  - repository: linkedtemplate
+    type: github
+    name: bsnehanshu/linkedtemplate
+    endpoint: Github
+
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
