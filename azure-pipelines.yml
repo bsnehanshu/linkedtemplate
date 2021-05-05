@@ -13,7 +13,7 @@ resources:
   - repository: linkedtemplate
     type: github
     name: bsnehanshu/linkedtemplate
-    endpoint: Github
+    endpoint: bsnehanshu
 
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
