@@ -8,13 +8,6 @@ trigger:
 
 pool: Default
 
-resources:
-  repositories:
-  - repository: linkedtemplate
-    type: github
-    name: bsnehanshu/linkedtemplate
-    endpoint: bsnehanshu
-
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
@@ -25,7 +18,7 @@ steps:
     resourceGroupName: 'SB-linked-RG'
     location: 'Australia East'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://github.com/bsnehanshu/linkedtemplate/blob/main/azuredeploy.json'
+    csmFileLink: 'https://raw.githubusercontent.com/bsnehanshu/linkedtemplate/main/azuredeploy.json'
     overrideParameters: '-projectName snehlinktemp'
     deploymentMode: 'Incremental'
     deploymentName: 'snehdeploy'
