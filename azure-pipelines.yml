@@ -19,6 +19,6 @@ steps:
     location: 'Australia East'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/bsnehanshu/linkedtemplate/main/azuredeploy.json'
-    overrideParameters: '-projectName snehlinktemp'
+    overrideParameters: '-projectName snehltpr'
     deploymentMode: 'Incremental'
     deploymentName: 'snehdeploy'
