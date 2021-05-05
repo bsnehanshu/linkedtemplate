@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Visual Studio Enterprise Subscription – MPN (78849b8b-1390-40a2-bc79-75236969c656)'
+    subscriptionId: '78849b8b-1390-40a2-bc79-75236969c656'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'SB-linked-RG'
+    location: 'Australia East'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/bsnehanshu/linkedtemplate/main/azuredeploy.json?token=AF2RAO2MHLSS3CEI7H37WXTASIY2O'
+    overrideParameters: '-projectName snehlinktemp'
+    deploymentMode: 'Incremental'
+    deploymentName: 'snehdeploy'
